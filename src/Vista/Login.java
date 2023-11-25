@@ -178,6 +178,7 @@ public class Login extends javax.swing.JFrame {
         txtPass.setBackground(new java.awt.Color(255, 255, 255));
         txtPass.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         txtPass.setForeground(new java.awt.Color(204, 204, 204));
+        txtPass.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         txtPass.setText("jPasswordField1");
         txtPass.setBorder(null);
         txtPass.addMouseListener(new java.awt.event.MouseAdapter() {
