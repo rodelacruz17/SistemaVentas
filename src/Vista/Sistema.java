@@ -962,11 +962,11 @@ public class Sistema extends javax.swing.JFrame {
 
         jLabel22.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel22.setText("DESCRIPCIÓN");
+        jLabel22.setText("NOMBRE");
 
         jLabel23.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel23.setText("CANTIDAD");
+        jLabel23.setText("STOCK");
 
         jLabel24.setFont(new java.awt.Font("Dialog", 0, 13)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(0, 0, 0));
@@ -1125,7 +1125,7 @@ public class Sistema extends javax.swing.JFrame {
                                 .addComponent(btnExcelPro))
                             .addComponent(btnNuevoPro))))
                 .addGap(33, 33, 33)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 515, Short.MAX_VALUE)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
                 .addGap(6, 6, 6))
         );
         jPanel6Layout.setVerticalGroup(
