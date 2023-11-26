@@ -1,19 +1,19 @@
 package Modelo;
 
-public class Cliente {
+public class Proveedor {
     private int id;
-    private int dni;
+    private String ruc;
     private String nombre;
     private int telefono;
     private String direccion;
     private String razon;
 
-    public Cliente() {
+    public Proveedor() {
     }
 
-    public Cliente(int id, int dni, String nombre, int telefono, String direccion, String razon) {
+    public Proveedor(int id, String ruc, String nombre, int telefono, String direccion, String razon) {
         this.id = id;
-        this.dni = dni;
+        this.ruc = ruc;
         this.nombre = nombre;
         this.telefono = telefono;
         this.direccion = direccion;
@@ -28,12 +28,12 @@ public class Cliente {
         this.id = id;
     }
 
-    public int getDni() {
-        return dni;
+    public String getRuc() {
+        return ruc;
     }
 
-    public void setDni(int dni) {
-        this.dni = dni;
+    public void setRuc(String ruc) {
+        this.ruc = ruc;
     }
 
     public String getNombre() {
@@ -67,6 +67,6 @@ public class Cliente {
     public void setRazon(String razon) {
         this.razon = razon;
     }
-
+    
     
 }
