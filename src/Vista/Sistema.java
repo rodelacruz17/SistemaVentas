@@ -16,7 +16,6 @@ import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.table.DefaultTableModel;
 
-
 public class Sistema extends javax.swing.JFrame {
 
     Cliente cl = new Cliente();
@@ -24,10 +23,12 @@ public class Sistema extends javax.swing.JFrame {
     Proveedor pr = new Proveedor();
     ProveedorDAO PrDAO = new ProveedorDAO();
     DefaultTableModel modelo = new DefaultTableModel();
+
     public Sistema() {
         initComponents();
         txtIdCliente.setVisible(false);
     }
+
     public void ListarCliente() {
         List<Cliente> ListarCl = client.ListarCliente();
         modelo = (DefaultTableModel) TableCliente.getModel();
@@ -44,12 +45,14 @@ public class Sistema extends javax.swing.JFrame {
         TableCliente.setModel(modelo);
 
     }
+
     public void LimpiarTable() {
         for (int i = 0; i < modelo.getRowCount(); i++) {
             modelo.removeRow(i);
             i = i - 1;
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -1488,7 +1491,7 @@ public class Sistema extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void NventaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NventaActionPerformed
-        
+
         jTabbedPane1.setSelectedIndex(0);
     }//GEN-LAST:event_NventaActionPerformed
 
@@ -1512,7 +1515,7 @@ public class Sistema extends javax.swing.JFrame {
 
     private void btnGuardarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarClienteActionPerformed
         if (!"".equals(txtDniCliente.getText()) || !"".equals(txtNombreCliente.getText()) || !"".equals(txtTelefonoCliente.getText()) || !"".equals(txtDireccionCliente.getText()) || !"".equals(txtRazonCliente.getText())) {
-            cl.setDni(Integer.parseInt(txtDniCliente.getText()));
+            cl.setDni(txtDniCliente.getText());
             cl.setNombre(txtNombreCliente.getText());
             cl.setTelefono(Integer.parseInt(txtTelefonoCliente.getText()));
             cl.setDireccion(txtDireccionCliente.getText());
@@ -1534,7 +1537,7 @@ public class Sistema extends javax.swing.JFrame {
         } else {
 
             if (!"".equals(txtDniCliente.getText()) || !"".equals(txtNombreCliente.getText()) || !"".equals(txtTelefonoCliente.getText()) || !"".equals(txtDireccionCliente.getText()) || !"".equals(txtRazonCliente.getText())) {
-                cl.setDni(Integer.parseInt(txtDniCliente.getText()));
+                cl.setDni(txtDniCliente.getText());
                 cl.setNombre(txtNombreCliente.getText());
                 cl.setTelefono(Integer.parseInt(txtTelefonoCliente.getText()));
                 cl.setDireccion(txtDireccionCliente.getText());
@@ -1636,15 +1639,15 @@ public class Sistema extends javax.swing.JFrame {
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         FlatMaterialLighterIJTheme.setup();
-        UIManager.put( "TabbedPane.selectedBackground", Color.white );
-        UIManager.put( "TextComponent.arc", 5 );
-        UIManager.put( "Component.arc", 500 );
-        UIManager.put( "Component.arrowType", "chevron" );
-        UIManager.put( "Component.focusWidth", 1 );
-        UIManager.put( "ScrollBar.trackInsets", new Insets( 2, 4, 2, 4 ) );
-        UIManager.put( "ScrollBar.thumbInsets", new Insets( 2, 2, 2, 2 ) );
-        UIManager.put( "ScrollBar.track", new Color( 0xe0e0e0 ) );
-        UIManager.put( "ScrollBar.showButtons", true );
+        UIManager.put("TabbedPane.selectedBackground", Color.white);
+        UIManager.put("TextComponent.arc", 5);
+        UIManager.put("Component.arc", 500);
+        UIManager.put("Component.arrowType", "chevron");
+        UIManager.put("Component.focusWidth", 1);
+        UIManager.put("ScrollBar.trackInsets", new Insets(2, 4, 2, 4));
+        UIManager.put("ScrollBar.thumbInsets", new Insets(2, 2, 2, 2));
+        UIManager.put("ScrollBar.track", new Color(0xe0e0e0));
+        UIManager.put("ScrollBar.showButtons", true);
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

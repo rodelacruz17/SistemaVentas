@@ -21,7 +21,7 @@ public class ClienteDAO {
         try {
             con = cn.getConnection();
             ps = con.prepareStatement(sql);
-            ps.setInt(1, cl.getDni());
+            ps.setString(1, cl.getDni());
             ps.setString(2, cl.getNombre());
             ps.setInt(3, cl.getTelefono());
             ps.setString(4, cl.getDireccion());
@@ -50,7 +50,7 @@ public class ClienteDAO {
            while (rs.next()) {               
                Cliente cl = new Cliente();
                cl.setId(rs.getInt("id"));
-               cl.setDni(rs.getInt("dni"));
+               cl.setDni(rs.getString("dni"));
                cl.setNombre(rs.getString("nombre"));
                cl.setTelefono(rs.getInt("telefono"));
                cl.setDireccion(rs.getString("direccion"));
@@ -86,7 +86,7 @@ public class ClienteDAO {
        String sql = "UPDATE clientes SET dni=?, nombre=?, telefono=?, direccion=?, razon=? WHERE id=?";
        try {
            ps = con.prepareStatement(sql);   
-           ps.setInt(1, cl.getDni());
+           ps.setString(1, cl.getDni());
            ps.setString(2, cl.getNombre());
            ps.setInt(3, cl.getTelefono());
            ps.setString(4, cl.getDireccion());
