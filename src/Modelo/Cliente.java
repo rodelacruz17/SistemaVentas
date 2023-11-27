@@ -4,14 +4,14 @@ public class Cliente {
     private int id;
     private String dni;
     private String nombre;
-    private int telefono;
+    private String telefono;
     private String direccion;
     private String razon;
 
     public Cliente() {
     }
 
-    public Cliente(int id, String dni, String nombre, int telefono, String direccion, String razon) {
+    public Cliente(int id, String dni, String nombre, String telefono, String direccion, String razon) {
         this.id = id;
         this.dni = dni;
         this.nombre = nombre;
@@ -44,11 +44,11 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 

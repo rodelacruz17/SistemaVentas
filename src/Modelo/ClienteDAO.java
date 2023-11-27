@@ -23,7 +23,7 @@ public class ClienteDAO {
             ps = con.prepareStatement(sql);
             ps.setString(1, cl.getDni());
             ps.setString(2, cl.getNombre());
-            ps.setInt(3, cl.getTelefono());
+            ps.setString(3, cl.getTelefono());
             ps.setString(4, cl.getDireccion());
             ps.setString(5, cl.getRazon());
             ps.execute();
@@ -52,7 +52,7 @@ public class ClienteDAO {
                cl.setId(rs.getInt("id"));
                cl.setDni(rs.getString("dni"));
                cl.setNombre(rs.getString("nombre"));
-               cl.setTelefono(rs.getInt("telefono"));
+               cl.setTelefono(rs.getString("telefono"));
                cl.setDireccion(rs.getString("direccion"));
                cl.setRazon(rs.getString("razon"));
                ListaCl.add(cl);
@@ -88,7 +88,7 @@ public class ClienteDAO {
            ps = con.prepareStatement(sql);   
            ps.setString(1, cl.getDni());
            ps.setString(2, cl.getNombre());
-           ps.setInt(3, cl.getTelefono());
+           ps.setString(3, cl.getTelefono());
            ps.setString(4, cl.getDireccion());
            ps.setString(5, cl.getRazon());
            ps.setInt(6, cl.getId());
