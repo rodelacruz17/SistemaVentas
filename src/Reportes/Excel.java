@@ -71,7 +71,7 @@ public class Excel {
  
             sheet.addMergedRegion(new CellRangeAddress(1, 2, 1, 3));
  
-            String[] cabecera = new String[]{"Código", "Nombre", "Precio", "Existencia"};
+            String[] cabecera = new String[]{"Código", "Nombre", "Precio", "Stock"};
  
             CellStyle headerStyle = book.createCellStyle();
             headerStyle.setFillForegroundColor(IndexedColors.SKY_BLUE.getIndex());

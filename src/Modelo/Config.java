@@ -1,20 +1,20 @@
 package Modelo;
 
-public class Cliente {
+public class Config {
 
     private int id;
-    private String dni;
+    private String ruc;
     private String nombre;
-    private String telefono;
+    private int telefono;
     private String direccion;
     private String razon;
 
-    public Cliente() {
+    public Config() {
     }
 
-    public Cliente(int id, String dni, String nombre, String telefono, String direccion, String razon) {
+    public Config(int id, String ruc, String nombre, int telefono, String direccion, String razon) {
         this.id = id;
-        this.dni = dni;
+        this.ruc = ruc;
         this.nombre = nombre;
         this.telefono = telefono;
         this.direccion = direccion;
@@ -29,12 +29,12 @@ public class Cliente {
         this.id = id;
     }
 
-    public String getDni() {
-        return dni;
+    public String getRuc() {
+        return ruc;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setRuc(String ruc) {
+        this.ruc = ruc;
     }
 
     public String getNombre() {
@@ -45,11 +45,11 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
 
