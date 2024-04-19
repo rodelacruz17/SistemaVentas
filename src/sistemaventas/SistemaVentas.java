@@ -4,6 +4,8 @@
  */
 package sistemaventas;
 
+import com.formdev.flatlaf.FlatLightLaf;
+
 /**
  *
  * @author rodel
@@ -15,6 +17,7 @@ public class SistemaVentas {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        FlatLightLaf.setup();
     }
     
 }

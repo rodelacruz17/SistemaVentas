@@ -1,4 +1,3 @@
-
 package Vista;
 
 import java.awt.Color;
@@ -8,29 +7,32 @@ import com.formdev.flatlaf.intellijthemes.materialthemeuilite.FlatMaterialLighte
 import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
+
     int xMouse, yMouse;
     login lg = new login();
     LoginDAO login = new LoginDAO();
-    
+
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
-    public void validar(){
+
+    public void validar() {
         String correo = txtCorreo.getText();
         String pass = String.valueOf(txtPass.getPassword());
         if (!"".equals(correo) || !"".equals(pass)) {
-            
+
             lg = login.log(correo, pass);
-            if (lg.getCorreo()!= null && lg.getPass() != null) {
+            if (lg.getCorreo() != null && lg.getPass() != null) {
                 Sistema sis = new Sistema();
                 sis.setVisible(true);
                 dispose();
-            }else{
+            } else {
                 JOptionPane.showMessageDialog(null, "Correo o la Contraseña incorrecta");
             }
         }
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -249,7 +251,7 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_ExitMouseClicked
 
     private void ExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseEntered
-        Exitpanel.setBackground(new Color(184,0,3));
+        Exitpanel.setBackground(new Color(184, 0, 3));
         Exit.setForeground(Color.white);
     }//GEN-LAST:event_ExitMouseEntered
 
